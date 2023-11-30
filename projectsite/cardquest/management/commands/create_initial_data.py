@@ -77,4 +77,21 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS('Successfully created Pokemon Cards.'))
 
     def create_trainers(self):
-        pass
+        trainer1 = Trainer(name="Ash", birthdate= "1987-05-22",location= "Pallet Town",email= "ash@pokemon.com") 
+        trainer2 = Trainer(name= "Gary",birthdate= "1984-08-06",location= "Pallet Town",email= "gary@pokemon.com")
+        trainer3 = Trainer(name="Giovanni",birthdate= "1983-06-01",location= "Viridian City",email= "giovanni@teamrocket.com")
+        trainer4 = Trainer(name="Silver",birthdate= "2007-12-24",location= "Johto City",email= "silver@pokemon.com")
+        trainer5 = Trainer(name="Gold",birthdate= "2007-07-21",location= "Erika City",email= "Erika@pokemon.com")
+        trainer6 = Trainer(name="Steven",birthdate= "1974-11-02",location= "Ever Grande City",email= "stevenstone@pokemon.com")
+        trainer7 = Trainer(name="Roxanne",birthdate= "2005-07-02" ,location= "Rustboro City" ,email= "roxanne@pokemon.com" )
+        trainer8 = Trainer(name="Aaron" ,birthdate= "2002-10-06" ,location= "Sinoh Region" ,email= "aaronelitefor@pokemon.com")
+        trainer9 = Trainer(name="Ronald",birthdate= "2003-06-27",location= "Buncag Grounds",email= "ronaldpogi@pokemon.com")
+        trainer10 = Trainer(name="Cedric" ,birthdate= "2004-06-02" ,location= "Bunkhose" ,email= "cedric@pokemon.com")
+
+        trainers = [trainer1, trainer2, trainer3, trainer4, trainer5, trainer6, trainer7, trainer8, trainer9, trainer10]
+
+        print("Trainers: ")
+        for trainer in trainers:
+            trainer.save()
+
+        self.stdout.write(self.style.SUCCESS('Successfully created Trainers.'))
